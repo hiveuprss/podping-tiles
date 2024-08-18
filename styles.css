@@ -1,7 +1,7 @@
 @keyframes fadeIn {   0% { opacity: 0; }   100% { opacity: 1; } }
 
 img {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     animation: fadeIn 3s;
     width: 24%;
     padding: 0;
