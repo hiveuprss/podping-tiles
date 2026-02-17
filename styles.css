@@ -1,28 +1,118 @@
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@font-face {
+    font-family: 'Jersey10';
+    src: url('fonts/Jersey_10/Jersey10-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 img {
     /* border: 2px solid black; */
     animation: fadeIn 3s;
-    width: 25%;
+    width: 20%;
     padding: 0;
     margin: 0;
 }
 
 body {
+    font-family: 'Jersey10', sans-serif;
     margin: 0;
     padding-bottom: 60px; /* Adjust this value based on the height of your header */
 }
 
 .fixed-footer {
+    display: flex;
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
     z-index: 1000; /* Ensure it stays on top of other content */
     padding: 10px 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Optional: Add shadow for better visibility */
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 59%;
+    /* Take up 80% of the width */
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 35%;
+    /* Take up 20% of the width */
+
+}
+
+.latest-podping {
+    white-space: pre-wrap;
+    /* Preserve whitespace and line breaks */
+    font-family: monospace;
+    /* Use a monospace font for better readability */
+    background-color: #f5f5f5;
+    /* Light grey background for contrast */
+    padding: 5px;
+    /* Padding for better spacing */
+    border: 1px solid #ddd;
+    /* Light border for definition */
+    border-radius: 4px;
+    /* Rounded corners for aesthetics */
+    overflow-x: auto;
+    /* Horizontal scroll for long lines */
+    font-size: 0.5rem;
+    /* Smaller font size for better readability */
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.large-text {
+    font-size: 24px;
+}
+
+.fancy-button {
+    /* Basic button styling */
+    padding: 5px 10px;
+    font-size: 16px;
+    -align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #d41818;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+
+    /* Transition for hover effects */
+    transition: all 0.3s ease;
+}
+
+.fancy-button.paused {
+    background-color: #3934cc;
+    /* Change to the desired paused color */
+}
+
+.fancy-button:hover {
+    background-color: #45a049;
+}
+
+.fancy-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
 }
